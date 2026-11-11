@@ -1,0 +1,23 @@
+Mask migration verified in Unity 6000.5.9f1 on 2026-10-13.
+Open Assets/Scenes/PersistentScene.unity and enter Play Mode. Use the in-game Start button to begin.
+All four game scenes import successfully with no missing scripts.
+Menu and Level1, Level2, Level3 loaded in Play Mode with one active camera and no logged errors during the smoke check.
+This was a startup and scene-transition check, not a full gameplay playthrough.
+
+Converted four Tuanjie scene extensions and 63 YAML namespace headers.
+Restored 178 encoded asset GUIDs from Tuanjie 1.8.0 AssetDatabase output.
+Updated two bundled TextMesh Pro example scripts for Unity 6 mesh UV APIs.
+Renamed DialogueScripts.cs to DialogueScript.cs with its original metadata and linked the seven dialogue assets to that script.
+PersistentScene and Level2Scene now contain no detected missing object references.
+
+Original repository issues also reproduced in Tuanjie
+Level1 child Animation references one absent animation clip in two fields.
+Level3 six memory trigger SpriteRenderers reference absent sprite assets.
+The original dialogue assets also lacked script links. These were repaired in this Unity copy.
+Original GGJ2026MASK source folder remains separate and unchanged by this migration.
+
+Evidence files
+MigrationGuidMapping.json
+MigrationTuanjieBaseline.json
+MigrationValidation.json
+MigrationRuntimeValidation.json
