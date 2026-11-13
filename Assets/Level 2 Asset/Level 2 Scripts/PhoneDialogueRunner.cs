@@ -57,10 +57,10 @@ public class PhoneDialogueRunner : MonoBehaviour
         // ========== 【打包修复】强制字体引用 ==========
         // 确保字体资源被打包
         if (defaultFont == null)
-            defaultFont = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            defaultFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
         if (fallbackFont == null)
-            fallbackFont = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            fallbackFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
         // 打印日志用于调试
         Debug.Log($"[PhoneDialogueRunner] 字体初始化完成: " +
@@ -216,7 +216,7 @@ public class PhoneDialogueRunner : MonoBehaviour
         Text dialogueText = bubble.GetComponentInChildren<Text>(true);
         if (dialogueText != null)
         {
-            dialogueText.text = line.text;
+            dialogueText.text = Loc.T(line.text);
             if (defaultFont != null)
             {
                 dialogueText.font = defaultFont;
@@ -231,7 +231,7 @@ public class PhoneDialogueRunner : MonoBehaviour
         TMPro.TMP_Text tmpText = bubble.GetComponentInChildren<TMPro.TMP_Text>(true);
         if (tmpText != null)
         {
-            tmpText.text = line.text;
+            tmpText.text = Loc.T(line.text);
             tmpText.enabled = true;
             tmpText.gameObject.SetActive(true);
             tmpText.color = Color.black; // 强制设置颜色
@@ -258,7 +258,7 @@ public class PhoneDialogueRunner : MonoBehaviour
         Text answerText = bubble.GetComponentInChildren<Text>(true);
         if (answerText != null)
         {
-            answerText.text = text;
+            answerText.text = Loc.T(text);
             if (defaultFont != null)
             {
                 answerText.font = defaultFont;
@@ -272,7 +272,7 @@ public class PhoneDialogueRunner : MonoBehaviour
         TMPro.TMP_Text tmpText = bubble.GetComponentInChildren<TMPro.TMP_Text>(true);
         if (tmpText != null)
         {
-            tmpText.text = text;
+            tmpText.text = Loc.T(text);
             tmpText.enabled = true;
             tmpText.gameObject.SetActive(true);
             tmpText.color = Color.black;

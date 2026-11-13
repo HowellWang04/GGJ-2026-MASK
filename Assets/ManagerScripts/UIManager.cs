@@ -348,7 +348,7 @@ public class UIManager: Singleton<UIManager>
     //������ʾ�ı�
     public void UpdateTipTexts(int textIndex)
     {
-        TipText.text= hintTexts[textIndex];
+        TipText.text= Loc.T(hintTexts[textIndex]);
         TipPanel.SetActive(true);
 
         // ʹ��Э��2������?
@@ -401,7 +401,7 @@ public class UIManager: Singleton<UIManager>
     //���»����ı�
     public void UpdateMemoryTexts(int textIndex)
     {
-        memoryText.text = memoryTexts[textIndex];
+        memoryText.text = Loc.T(memoryTexts[textIndex]);
         memoryPanel.SetActive(true);
 
         
@@ -715,11 +715,11 @@ public class UIManager: Singleton<UIManager>
         // 设置结果文本
         if (isOvertime)
         {
-            resultText.text = "你上班迟到了。。。";
+            resultText.text = Loc.T("你上班迟到了。。。");
         }
         else
         {
-            resultText.text = "你及时到达了公司";
+            resultText.text = Loc.T("你及时到达了公司");
         }
         // 显示结果面板并淡入
         resultPanel.SetActive(true);

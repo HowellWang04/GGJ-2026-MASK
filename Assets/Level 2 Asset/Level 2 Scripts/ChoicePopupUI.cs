@@ -17,8 +17,8 @@ public class ChoicePopupUI : MonoBehaviour
     public void Show(string a, string b, System.Action onA, System.Action onB)
     {
         root.SetActive(true);
-        textA.text = a;
-        textB.text = b;
+        textA.text = Loc.T(a);
+        textB.text = Loc.T(b);
         // 强制设置字体，确保打包后显示
         if (defaultFont != null)
         {
