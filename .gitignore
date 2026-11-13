@@ -10,3 +10,4 @@
 *.csproj
 *.sln
 *.slnx
+/[Dd]ata/
